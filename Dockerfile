@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     # 编译基础
-    build-essential \
+    build-essential python2 \
     gcc g++ \
     make cmake \
     ccache \
