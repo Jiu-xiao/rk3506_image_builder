@@ -9,12 +9,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     # 编译基础
-    build-essential python2 \
-    gcc g++ \
-    make cmake \
-    ccache \
+    build-essential python2 python-is-python3 sudo \
+    gcc g++ libgmp-dev libmpc-dev \
+    make cmake nano expect expect-dev bsdmainutils \
+    ccache iputils-ping cpio openssh-client fakeroot \
     # 版本与工具
-    git curl wget unzip zip rsync gawk \
+    git curl wget unzip zip rsync gawk scons \
     # Python（Buildroot/脚本常用）
     python3 python3-pip python3-venv \
     # 设备树/内核等依赖
